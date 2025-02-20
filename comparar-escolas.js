@@ -25,16 +25,19 @@ class Senai {
 }
 
 function compararEscolas(escolaA, escolaB) {
+    let resultado = "";
 
     if (escolaA.quantidade_de_cursos > escolaB.quantidade_de_cursos) {
-        relatorio.textContent = `O SENAI de ${escolaA.cidade} tem mais cursos que o SENAI de ${escolaB.cidade}.`;
-        relatorio.textContent = `${escolaA.cidade}: ${escolaA.quantidade_de_cursos} vs ${escolaB.cidade}: ${escolaB.quantidade_de_cursos}`;
+        resultado = `O SENAI de ${escolaA.cidade} tem mais cursos que o SENAI de ${escolaB.cidade}.<br>
+        ${escolaA.cidade}: ${escolaA.quantidade_de_cursos} vs ${escolaB.cidade}: ${escolaB.quantidade_de_cursos}`;
     } else if (escolaB.quantidade_de_cursos > escolaA.quantidade_de_cursos) {
-        relatorio.textContent = `O SENAI de ${escolaB.cidade} tem mais cursos que o SENAI de ${escolaA.cidade}.`;
-        relatorio.textContent = `${escolaB.cidade}: ${escolaB.quantidade_de_cursos} vs ${escolaA.cidade}: ${escolaA.quantidade_de_cursos}`;
+        resultado = `O SENAI de ${escolaB.cidade} tem mais cursos que o SENAI de ${escolaA.cidade}.<br>
+        ${escolaB.cidade}: ${escolaB.quantidade_de_cursos} vs ${escolaA.cidade}: ${escolaA.quantidade_de_cursos}`;
     } else {
-        relatorio.textContent = `As duas escolas têm a mesma quantidade de cursos: ${escolaA.quantidade_de_cursos}.`;
+        resultado = 'As duas escolas têm a mesma quantidade de cursos:';
     }
+
+    return resultado;
 
 }
 
@@ -56,12 +59,12 @@ function gerarRelatorio() {
     const relatorioDiv = document.getElementById("relatorio");
     relatorioDiv.style.display = "block";
     relatorioDiv.innerHTML = `
-        <h2>Relatório Cadastro</h2>
-        ${escolaA.dadosEscola()}
-        ${escolaB.dadosEscola()}
-        <h3>#Fim Relatório Cadastro</h3>
-        <h3>#Relatório de Cursos</h3>
-        ${compararEscolas(escolaA, escolaB)}
+        <h2>Relatório Cadastro</h2> <br>
+        ${escolaA.dadosEscola()} <br>
+        ${escolaB.dadosEscola()} <br>
+        <h3>#Fim Relatório Cadastro</h3> <br>
+        <h3>#Relatório de Cursos</h3> <br>
+        ${compararEscolas(escolaA, escolaB)} 
     `;
 }
 

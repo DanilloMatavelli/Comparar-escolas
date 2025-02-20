@@ -6,9 +6,12 @@
 
 body{
     background-color: bisque;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: normal;
-
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
 }
 
 .container-principal{
@@ -21,7 +24,7 @@ body{
 }
 
 .container-titulo{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Roboto", serif;
     font-weight: bold;
     color: rgb(172, 137, 93);
 }
@@ -61,7 +64,7 @@ body{
     color: rgb(175, 93, 93);
     background-color: burlywood;
     margin-top: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Roboto", serif;
     font-weight: bold;
 }
 
@@ -73,5 +76,12 @@ body{
     display: none;
 }
  
-
+.relatorio{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: antiquewhite;
+}
 
