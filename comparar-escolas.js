@@ -6,12 +6,15 @@ class Senai {
     //Dentro de uma classe não precisa da palavra
 
     constructor(codigo, cidade, ano_de_construcao, quantidade_de_cursos) {
+        // Propriedades são codigo, cidade, ano de construção e quantidade de cursos = valor da propriedade
         this.codigo = codigo;
         this.cidade = cidade;
         this.ano_de_construcao = ano_de_construcao;
         this.quantidade_de_cursos = quantidade_de_cursos;
     }
 
+    // Criação de um Método
+    // Métodos são funções criadas dentro de uma propriedade
     dadosEscola() {
         const idadeEscola = this.calcularIdadeEscola();
         return `O código ${this.codigo} pertence à Escola SENAI de ${this.cidade}.<br>
